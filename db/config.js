@@ -1,12 +1,13 @@
 const mysql = require('mysql')
+const info = require('./db.config')
 
 const request = (query) => new Promise((res, rej) => {
     const connection = mysql.createConnection({
-        host:'localhost',
+        host: info.HOST,
         port:'3306',
-        user: 'root',
-        password: '',
-        database: 'tripiando'
+        user: info.USER,
+        password: info.PASSWORD,
+        database: info.DB
     })
 
     connection.query(query, (error, data, fields) => {
