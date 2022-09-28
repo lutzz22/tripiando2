@@ -3,9 +3,8 @@ const {request} = require('../db/config')
 const allPosts = async () => {
     const data = await request('SELECT * FROM posteos')
 
-    return{
-        posts: data
-    }
+    return data
+    
 }
 
 const postsByUser = async (username) => {

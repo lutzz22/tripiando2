@@ -9,7 +9,7 @@ const allUsers = async () => {
 }
 
 const usersById = async (id) => {
-    const data = await request(`SELECT * FROM usuarios WHERE id = ('${id}')`)
+    const data = await request(`SELECT * FROM usuarios WHERE id = ${id}`)
 
     return {
         user: data[0]

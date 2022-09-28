@@ -10,6 +10,7 @@ router.get('/', allUsersController)
 //a cada perfil
 router.get('/:id', usersByIdController)
 
+// login
 router.post('/login', loginUserController)
 
 //crear perfil
