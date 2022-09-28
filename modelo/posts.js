@@ -10,9 +10,8 @@ const allPosts = async () => {
 const postsByUser = async (username) => {
     const data = await request(`SELECT * FROM posteos WHERE username = ('${username}')`)
 
-    return{
-        posts: data
-    }
+    return data
+    
 }
 
 const createPost = async (category, username, tittle, post) => {
